@@ -13,7 +13,7 @@ const pool = new Pool({
 
 // Allow your Vercel frontend to talk to this server
 app.use(cors({
-    origin: "https://pluse-connect.vercel.app",
+    origin: "https://pluseconnect.netlify.app",
     methods: ["GET", "POST"],
     credentials: true
 }));
@@ -22,7 +22,7 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://pluse-connect.vercel.app",
+        origin: "https://pluseconnect.netlify.app",
         methods: ["GET", "POST"],
         credentials: true
     },
